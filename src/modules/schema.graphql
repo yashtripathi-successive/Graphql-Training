@@ -1,0 +1,20 @@
+
+
+
+type Query {
+
+# assignment 1 question 3
+
+    books: [Book!]!
+    book(id: ID!): Book   
+
+
+# assignment 1 question 4
+
+    posts: [Post!]!
+    post(id:ID!): Post
+    users: [User!]!
+    user(id:ID!): User
+
+}
+
