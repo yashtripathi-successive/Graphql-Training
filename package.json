@@ -36,12 +36,13 @@
     "@types/geoip-lite": "^1.4.4",
     "@types/node": "^24.1.0",
     "nodemon": "^3.1.10",
+    "prettier": "3.6.2",
     "ts-node": "^10.9.2",
     "typescript": "^5.8.3"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start":"nodemon app.js"
+    "start": "nodemon app.js"
   },
   "repository": {
     "type": "git",

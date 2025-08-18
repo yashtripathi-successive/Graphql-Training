@@ -1,20 +1,62 @@
+union userResult = User | Error
+union usersResult = userSuccess | Error
+union postsResult = postSuccess | Error
+union postResult = Post | Error
+union bookResult = Book | Error
+union booksResult = bookSuccess | Error
+union deleteCommentResult = deleteCommentSuccess | Error
+union addPostResult = addPostSuccess | Error
+union paginationResult = PaginationsSuccess | Error
 
+type userSuccess {
+    users:[User!]!
+}
+
+type postSuccess {
+    posts:[Post!]!
+}
+
+type bookSuccess {
+    books: [Book!]!
+}
+
+type deleteCommentSuccess {
+    comments:[Comment!]!
+}
+
+type addPostSuccess {
+    posts:[Post!]!
+}
 
 
 type Query {
 
 # assignment 1 question 3
 
-    books: [Book!]!
-    book(id: ID!): Book   
+    books: booksResult
+    book(id: ID!): bookResult   
 
 
 # assignment 1 question 4
 
-    posts: [Post!]!
-    post(id:ID!): Post
-    users: [User!]!
-    user(id:ID!): User
+    posts: postsResult
+    post(id:ID!): postResult
+    users: usersResult
+    user(id:ID!): userResult
+
+
+# assignment 2 question 6
+
+    pagination(page:Int!,limit:Int!,direction:String!):paginationResult!
 
 }
 
+type Mutation {
+
+    deleteComment(id:ID!):deleteCommentResult
+    updateUserName(id:ID!,newUserName:String!):userResult
+
+    # Assignment 2 Q1 and Q2
+    addPost(postID:ID!,postName:String!):addPostResult
+    addCommentToPost(postID:ID!,commentID:ID!,title:String!,rating:String!):postResult
+}

@@ -8,4 +8,8 @@ type Book {
 type Review {
     reviewId: ID!
     content: String!
+},
+
+type Error{
+    message: String!
 }

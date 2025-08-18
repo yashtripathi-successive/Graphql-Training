@@ -1,7 +1,7 @@
 export const comments = [
-  { title: 'Great post!', rating: 5 },
-  { title: 'Needs more detail.', rating: 3 },
-  { title: 'Very informative.', rating: 4 },
+  { id:"1",title: 'Great post!', rating: "5" },
+  { id:"2",title: 'Needs more detail.', rating: "3" },
+  { id:"3",title: 'Very informative.', rating: "4" },
 ];
 
 export const posts = [
@@ -13,7 +13,7 @@ export const posts = [
   {
     postId: '102',
     postName: 'Understanding Resolvers',
-    comments: [comments[1]],
+    comments: [comments[1]]
   }
 ];
 
@@ -22,12 +22,10 @@ export const users = [
     id: '1',
     name: 'Alice',
     posts: [posts[0]],
-    comments: [comments[0]],
   },
   {
     id: '2',
     name: 'Bob',
-    posts: [posts[1]],
-    comments: [comments[1], comments[2]],
+    posts: [posts[1]]
   }
 ];

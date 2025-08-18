@@ -2,7 +2,6 @@ type User {
     id:ID!
     name:String!
     posts:[Post!]!
-    comments:[Comment!]!
 }
 
 type Post {
@@ -12,7 +11,20 @@ type Post {
 }
 
 type Comment {
+    id:ID!
     title:String!
-    rating:Int!
+    rating:String!
+},
+
+type Error {
+    message:String!
 }
 
+
+type PaginationsSuccess {
+   
+    paginatedPosts:[Post!]!
+    totalPosts:Int!
+    totalPages:Int!
+    currentPage:Int!
+}

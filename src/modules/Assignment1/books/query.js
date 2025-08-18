@@ -1,8 +1,15 @@
+import delay from "../utils/delayFunction.js";
 import { books,reviews } from "./dataSource.js";
 
 export const booksQueryResolvers = {
-    books: () => books,
-    book: (_, { id }) => books.find(book => book.id === id),
+    books: async () => {
+      await delay(2000)
+      return {books}
+    },
+    book: async (_, { id }) => {
+      await delay(2000)
+      return books.find(book => book.id === id)
+    },
 };
 
 export const booksResolvers = {
