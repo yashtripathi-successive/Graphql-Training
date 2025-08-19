@@ -45,18 +45,20 @@ type Query {
     user(id:ID!): userResult
 
 
-# assignment 2 question 6
+# assignment 2 question 6 and quetsion 7
 
     pagination(page:Int!,limit:Int!,direction:String!):paginationResult!
 
 }
 
 type Mutation {
+    
+    # Assignment 2 Q1 and Q2
 
     deleteComment(id:ID!):deleteCommentResult
     updateUserName(id:ID!,newUserName:String!):userResult
 
-    # Assignment 2 Q1 and Q2
+    
     addPost(postID:ID!,postName:String!):addPostResult
     addCommentToPost(postID:ID!,commentID:ID!,title:String!,rating:String!):postResult
 }
