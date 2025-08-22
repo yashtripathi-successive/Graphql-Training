@@ -1,0 +1,54 @@
+
+type DummyComment{
+    content:String!
+    createdAt:String!
+}
+
+
+type LoginOutput{
+    email:String!
+    password:String!
+    token:String!
+}
+
+type RegisterOutput{
+    username:String!
+    email:String!
+    password:String!
+    token:String!
+}
+
+input LoginInput{
+    email:String!
+    password:String!
+}
+
+input RegisterInput{
+    username:String!
+    email:String!
+    password:String!
+}
+
+input MessageInput{
+    message:String!
+   
+}
+
+type MessageOutput{
+    message:String!
+    
+}
+
+
+type DummyMessageOutput{
+    message:String!
+    senderName:String!
+    
+}
+
+
+type UserPresence {
+  username: String!
+  status: String! 
+}
+

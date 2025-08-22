@@ -49,6 +49,26 @@ type Query {
 
     pagination(page:Int!,limit:Int!,direction:String!):paginationResult!
 
+
+    # messages: Message!
+
+
+
+
+# Assignment 4 question 1 and question 2
+
+    getALlPersons:[Person!]!
+    getPersonByID(id:ID!):Person!
+
+
+# Assignment 3 question 2
+
+    getComments:[DummyComment!]!
+
+# Assignment 3 question 5
+    getAllDummyMessages:[DummyMessageOutput!]!
+    getDummyMessageById(id: ID!): DummyMessageOutput!
+
 }
 
 type Mutation {
@@ -61,4 +81,62 @@ type Mutation {
     
     addPost(postID:ID!,postName:String!):addPostResult
     addCommentToPost(postID:ID!,commentID:ID!,title:String!,rating:String!):postResult
+
+
+    # Assignment 3 Question 1
+
+    # messageAdded(name:String!,email:String!):DisplayNameAndEmail!
+
+    # Assignment 3 Question 2
+
+    # addComment(id:ID!,title:String!):Commentt!
+
+    # Assignment 3 Question 3
+
+    # register(first_name:String!,last_name:String!):AuthPayload!
+    # login(first_name:String!,last_name:String!):LoginResponse!
+    # logout:UserPreference!
+    # sendMessage(content:String!):Message!
+
+
+
+
+ # Assignment 3 Question 1
+
+    # type Subscription {
+    # messageAdded:String!
+    # commentAdded:Commentt!
+    # userPresenceChanged:UserPreference!
+    # }
+
+
+# Assignment 4 Question 1 and Question 2
+
+    # createPerson(name:String!,email:String!):Person!
+
+    changePersonName(id:ID!,newName:String!):Person!
+    registerPerson(name:String!,email:String!,password:String!,role:String!):RegisterResponse!
+    loginPerson(email:String!,password:String!):LoginResponse!
+
+
+
+# Assignment 3 question 2
+
+    addComment(contentData:String!):DummyComment!
+
+# Assignment 3 question 3
+
+    registerDummyUser(input:RegisterInput!):RegisterOutput!
+    loginDummyUser(input:LoginInput!):LoginOutput!
+    sendDummyMessage(input:MessageInput!):MessageOutput!
+}
+
+# Assignment 3 question 1
+
+
+type Subscription {
+    hello: String!
+    time: String!
+    comment:DummyComment!
+    userPresenceChanged: UserPresence!
 }

@@ -1,0 +1,20 @@
+
+type Person{
+    name:String!
+    email:String!
+    password:String!
+    role:String!
+}
+
+type RegisterResponse{
+    message:String!
+    person:Person!
+    token:String!
+}
+
+type LoginResponse{
+    message:String!
+    person:Person!
+    token:String!
+}
+
