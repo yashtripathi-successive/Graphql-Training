@@ -131,7 +131,7 @@ type Mutation {
     sendDummyMessage(input:MessageInput!):MessageOutput!
 }
 
-# Assignment 3 question 1
+# Assignment 3 question 1,2 and 4
 
 
 type Subscription {
