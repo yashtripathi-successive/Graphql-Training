@@ -1,0 +1,30 @@
+type User {
+    id:ID!
+    name:String!
+    posts:[Post!]!
+}
+
+type Post {
+    postId:ID!
+    postName:String!
+    comments:[Comment!]!
+}
+
+type Comment {
+    id:ID!
+    title:String!
+    rating:String!
+},
+
+type Error {
+    message:String!
+}
+
+
+type PaginationsSuccess {
+   
+    paginatedPosts:[Post!]!
+    totalPosts:Int!
+    totalPages:Int!
+    currentPage:Int!
+}
